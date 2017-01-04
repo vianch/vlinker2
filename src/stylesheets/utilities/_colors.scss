@@ -1,0 +1,45 @@
+//== Colors
+
+//= Primary colors
+$color-blue       : #65a8e8;
+$color-green      : #27ae60;
+$color-yellow     : #f7ab17;
+$color-low-yellow : #fef5e3;
+$color-red 	      : #e84a6a;
+
+//= Information colors
+$color-success    : #5cb85c !default;
+$color-info       : #5bc0de !default;
+$color-warning    : $color-yellow  !default;
+$color-danger     : $color-red     !default;
+
+//= Light Blue palette
+$color-light-blue-50  : #E1F5FE !default;
+$color-light-blue-100 : #B3E5FC !default;
+$color-light-blue-200 : #81D4FA !default;
+$color-light-blue-300 : #4FC3F7 !default;
+$color-light-blue-400 : #29B6F6 !default;
+$color-light-blue-500 : #03A9F4 !default;
+$color-light-blue-600 : #039BE5 !default;
+$color-light-blue-700 : #0288D1 !default;
+$color-light-blue-800 : #0277BD !default;
+$color-light-blue-900 : #01579B !default;
+
+//= Gray colors
+$color-gray             : #9E9E9E !default;
+$color-gray-dark        : #212121 !default;
+$color-gray-light       : #999999 !default;
+$color-gray-light-2     : lighten($color-gray-light , 20%) !default;
+$color-gray-light-3     : lighten($color-gray-light , 30%) !default;
+
+//** Theme Colors
+$color-theme-primary   : $color-light-blue-700 !default;
+$color-theme-2   : #FAFAFA !default;
+$color-theme-3   : #F5F5F5 !default;
+$color-theme-4   : #E0E0E0 !default;
+$color-theme-5   : #424242 !default;
+
+//= Basic colors
+$white-color      : #ffffff !default;
+$body-bg          : #f6f0f0 !default;
+$font-color 	  : #575964 !default;
