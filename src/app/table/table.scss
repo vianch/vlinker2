@@ -1,0 +1,82 @@
+@import "../../stylesheets/utilities/_variables";
+@import "../../stylesheets/utilities/mixins";
+
+.vl-table-wrapper-c {
+  $space-size: 45px;
+
+  @include set-size(100%, 100%, true, false);
+  background: $color-green;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: $space-size;
+
+  h1 {
+    margin-bottom: $space-size;
+  }
+}
+
+// thera scss
+
+// COMMON BETWEEN ASIDE AND BODY
+$th-row-height: 30px;
+$th-table-width: 620px;
+$th-column-width: 110px;
+$th-table-height: 400px;
+
+.th-fixed-table .table {
+  background-color: $color-light-blue-50;
+  width: auto;
+
+  tr td,
+  tr th {
+    min-width: $th-column-width;
+    width: $th-column-width;
+    min-height: $th-row-height;
+    height: $th-row-height - 10px;
+    padding: 5px;
+  }
+
+  tr {
+    border-bottom: 1px solid $color-light-blue-600;
+  }
+}
+
+// HEADER
+.th-table-header {
+  @include set-size($th-table-width, $th-row-height + 1, true, true);
+  background-color: $color-light-blue-50;
+
+  .th-first-column-title {
+    @include set-size($th-column-width, $th-row-height, false, false);
+    float: left;
+    text-align: center;
+    line-height: 30px;
+  }
+
+  .th-fixed-table-header {
+    @include set-size($th-table-width - $th-column-width, $th-row-height, false, false);
+    overflow: hidden;
+    border-bottom: 1px solid #CCC;
+    float: left;
+  }
+}
+
+// SIDEBAR
+.th-fixed-table-sidebar {
+  @include set-size($th-column-width, $th-table-height, false, false);
+  float: left;
+  overflow: hidden;
+  border-right: 1px solid #CCC;
+}
+
+
+// BODY
+.th-fixed-table-body {
+  @include set-size($th-table-width - $th-column-width, $th-table-height, false, false);
+  overflow: auto;
+  float: left;
+}
+
+
+
