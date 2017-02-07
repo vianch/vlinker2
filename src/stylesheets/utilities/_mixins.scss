@@ -64,6 +64,13 @@
   transition-property:         $duration;
 }
 
+@mixin user-select($property...) {
+  -moz-user-select: $property;
+  -ms-user-select: $property;
+  -webkit-user-select: $property;
+  user-select: $property;
+}
+
 // Transform mixins
 @mixin transform($transform) {
   -webkit-transform: $transform;

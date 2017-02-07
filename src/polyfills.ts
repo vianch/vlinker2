@@ -33,6 +33,8 @@ import 'zone.js/dist/zone';
 // Typescript emit helpers polyfill
 import 'ts-helpers';
 
+import "socket.io-client";
+
 if (environment.production) {
     // Production
 } else {

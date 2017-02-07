@@ -2,6 +2,8 @@ import { NgModule } from "@angular/core";
 import {CommonModule} from "@angular/common";
 import {FormsModule} from "@angular/forms";
 
+import {SocketEventsService} from "./socket.service";
+
 @NgModule({
     imports: [
         CommonModule,
@@ -13,6 +15,6 @@ import {FormsModule} from "@angular/forms";
     ],
     declarations: [
     ],
-    providers: [],
+    providers: [SocketEventsService],
 })
 export class SharedModule { }

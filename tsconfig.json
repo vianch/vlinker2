@@ -24,9 +24,13 @@
       "selenium-webdriver",
       "source-map",
       "uglify-js",
-      "webpack"
+      "webpack",
+      "socket.io"
     ]
   },
+  "files": [
+    "src/app/shared/typings/index.d.ts"
+  ],
   "exclude": [
     "node_modules",
     "dist"

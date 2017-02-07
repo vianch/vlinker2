@@ -1,0 +1,97 @@
+@import "../../stylesheets/utilities/variables";
+@import "../../stylesheets/utilities/mixins";
+
+.vl-lights-wrapper {
+  @include set-size(100%, 100%, true, true);
+  position: fixed;
+  left: 0;
+  top: 0;
+    background: $color-theme-5;
+}
+.vl-lights-c {
+  @include set-size(100px, 190px, true, true);
+  margin: 25% auto;
+
+  .vl-arcade-button {
+    @include set-size(75px, 75px, true, true);
+    @include circle(75px);
+    @include transition(all 35ms linea);
+    @include user-select(none);
+    margin-bottom: 15px;
+
+    .inner {
+      @include set-size(75px, 75px, false, false);
+      position: relative;
+      margin-top: -8px;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      -moz-transition: margin 35ms 35ms linear, box-shadow 35ms linear;
+      -o-transition: margin 35ms 35ms linear, box-shadow 35ms linear;
+      -webkit-transition: margin 35ms 35ms, box-shadow 35ms linear;
+      -webkit-transition-delay: linear, 0s;
+      transition: margin 35ms 35ms linear, box-shadow 35ms linear;
+      -ms-transition: margin 35ms 35ms linear, box-shadow 35ms linear;
+    }
+
+    &.sea {
+      border: 5px solid $color-light-blue-600;
+      background-color: $color-light-blue-800;
+
+      .inner {
+        background-color: $color-light-blue-600;
+      }
+    }
+    &.red {
+      border: 5px solid $color-red-500;
+      background-color: $color-red-800;
+
+      .inner {
+        background-color: $color-red-500;
+      }
+    }
+
+    &:active {
+      .inner {
+        margin-top: 0;
+        -moz-transition: margin 35ms linear, box-shadow 17.5ms 17.5ms linear;
+        -o-transition: margin 35ms linear, box-shadow 17.5ms 17.5ms linear;
+        -webkit-transition: margin 35ms linear, box-shadow 17.5ms 17.5ms;
+        -webkit-transition-delay: 0s, linear;
+        transition: margin 35ms linear, box-shadow 17.5ms 17.5ms linear;
+        -ms-transition: margin 35ms linear, box-shadow 17.5ms 17.5ms linear;
+
+      }
+
+      &.sea .inner {
+        -moz-box-shadow: $color-light-blue-800 0 8px 0 inset;
+        -webkit-box-shadow: $color-light-blue-800 0 8px 0 inset;
+        box-shadow: $color-light-blue-800 0 8px 0 inset;
+      }
+
+      &.red .inner {
+        -moz-box-shadow: $color-red-800 0 8px 0 inset;
+        -webkit-box-shadow: $color-red-800 0 8px 0 inset;
+        box-shadow: $color-red-800 0 8px 0 inset;
+      }
+    }
+  }
+
+  .text {
+    position: absolute;
+    top: 26px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Courier New;
+    font-size: 13px;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-shadow: rgba(0, 0, 0, 0.5) 0 0 5px;
+  }
+}

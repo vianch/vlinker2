@@ -7,7 +7,8 @@ import {AppRouting} from "./app.routes";
 import {HomeComponent} from "./home/home.component";
 import {SharedModule} from "./shared/shared.module";
 import {PasswordGeneratorComponent} from "./password-generator/password-generator.component";
-import {TableComponent} from "./table/table.component";
+import {ColorPickerComponent} from "./color-picker/color-picker.component";
+import {LightsComponent} from "./lights/lights.component";
 
 @NgModule({
     imports: [
@@ -19,8 +20,9 @@ import {TableComponent} from "./table/table.component";
     declarations: [
         AppComponent,
         HomeComponent,
+        ColorPickerComponent,
+        LightsComponent,
         PasswordGeneratorComponent,
-        TableComponent,
     ],
     providers: [/* TODO: Providers go here */],
     bootstrap: [AppComponent],

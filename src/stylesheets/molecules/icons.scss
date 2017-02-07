@@ -1,0 +1,44 @@
+@import "../utilities/mixins";
+
+.vl-icons {
+  line-height: 64px;
+
+  &:before {
+    @include set-size(75px, 66px, false, true);
+    content: "";
+    background: url($images-url + "icons.png") no-repeat;
+    float: left;
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  &.vl-bulb-icon {
+    &:before {
+      background-position: -10px -19px;
+    }
+  }
+
+  &.vl-bars-icon {
+    &:before {
+      background-position: -10px -108px;
+    }
+  }
+
+  &.vl-lab-icon {
+    &:before {
+      background-position: -10px -198px;
+    }
+  }
+
+  &.vl-shield-icon {
+    &:before {
+      background-position: -10px -287px;
+    }
+  }
+
+  &.vl-toilet-icon {
+    &:before {
+      background-position: -10px -371px;
+    }
+  }
+}

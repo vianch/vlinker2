@@ -1,13 +1,17 @@
-// Vendors
-@import "vendors/font-awesome/font-awesome";
-
 //normalize
 @import "utilities/normalize";
 
 // Utilities
-@import "utilities/_variables";
+@import "utilities/variables";
 @import "utilities/mixins";
+
+// Vendors
+@import "vendors/font-awesome/font-awesome";
+@import "vendors/animate";
 
 //atoms
 @import "atoms/body";
 @import "atoms/headlines";
+
+//molecules
+@import "molecules/icons";

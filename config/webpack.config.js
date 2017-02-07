@@ -92,6 +92,9 @@ const config = {
         new CommonsChunkPlugin({
             name: ['polyfills', 'vendor'].reverse()
         }),
+        new webpack.ProvidePlugin({
+            "io": "socket.io-client"
+        }),
 
         new webpack.ContextReplacementPlugin(
             /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
