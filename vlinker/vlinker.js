@@ -41,7 +41,7 @@ class Vlinker {
 		console.log("*** HELP                                  ***");
 		console.log("*** -l led light (boolean ej: -l true)    ***");
 		console.log("*** -c catode light (boolean ej: -c true) ***");
-		console.log("*** -rgb rgb color (exa ej: -rgb #ffffff) ***");
+		console.log("*** -r rgb color (exa ej: -r '#ffffff)'   ***");
 		console.log("*** -h help                               ***");
 		console.log("*********************************************");
 	}
@@ -66,8 +66,9 @@ class Vlinker {
 		 	isAnode: false,
 		 	board: this._board
 		});
-		if (this.arguments.rgb) {
-			this.setLigthColor(this.arguments.rgb)
+		console.log("eL RGB: ", this.arguments.r);
+		if (this.arguments.r) {
+			this.setLigthColor(this.arguments.r)
 		} else {
 			this.setLigthColor("#F20FE3")
 		}
