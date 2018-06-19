@@ -2,6 +2,7 @@
 
 const  five = require("johnny-five");
 const temporal = require("temporal");
+const minimist =  require('minimist');
 
 class Vlinker {
 
@@ -14,7 +15,17 @@ class Vlinker {
 		this._motionSensor = null;
 		this._isVlinkerReady = false;
 		this._fadeTemporal = null;
-		this.startBoard();
+		this.startMinimist();
+	}
+
+	startMinimist() {
+		this.arguments = minimist(process.argv.slice(2));
+		if (this.arguments.h) {
+			this.printMinimistHelp();
+		} else {
+			console.log("Type -h for help");
+			this.startBoard();
+		}
 	}
 
 	startBoard() {
@@ -25,9 +36,26 @@ class Vlinker {
 		});
 	}
 
+	printMinimistHelp() {
+		console.log("*********************************************");
+		console.log("*** HELP                                  ***");
+		console.log("*** -l led light (boolean ej: -l true)    ***");
+		console.log("*** -c catode light (boolean ej: -c true) ***");
+		console.log("*** -rgb rgb color (exa ej: -rgb #ffffff) ***");
+		console.log("*** -h help                               ***");
+		console.log("*********************************************");
+
+	}
+
 	initializeComponents() {
-		this.startLedRGB();
-        this.startRelay();
+		if (this.arguments.l) {
+			this.startLedRGB();
+		}
+		
+		if (this.arguments.c) {
+			this.startRelay();
+		}
+
 		// this.startCameraTrigger();
 		// this.startMotionSensor();
 		// this.startLCDController();
@@ -39,7 +67,11 @@ class Vlinker {
 		 	isAnode: false,
 		 	board: this._board
 		});
-		this.setLigthColor("#F20FE3")
+		if (this.arguments.rgb) {
+			this.setLigthColor(this.arguments.rgb)
+		} else {
+			this.setLigthColor("#F20FE3")
+		}
 	}
 
 	startLCDController() {
