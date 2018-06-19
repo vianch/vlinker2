@@ -66,7 +66,7 @@ class Vlinker {
 		 	isAnode: false,
 		 	board: this._board
 		});
-		console.log("eL RGB: ", this.arguments.r);
+
 		if (this.arguments.r) {
 			this.setLigthColor(this.arguments.r)
 		} else {
