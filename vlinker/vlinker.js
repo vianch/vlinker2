@@ -9,7 +9,7 @@ class Vlinker {
 	constructor() {
 		this._led = null;
 		this._lcd = null;
-        this._relay = null;
+    	this._relay = null;
 		this._board = null;
 		this._interval = null;
 		this._motionSensor = null;
@@ -44,7 +44,6 @@ class Vlinker {
 		console.log("*** -rgb rgb color (exa ej: -rgb #ffffff) ***");
 		console.log("*** -h help                               ***");
 		console.log("*********************************************");
-
 	}
 
 	initializeComponents() {
